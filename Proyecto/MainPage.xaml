@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Mensaje de bienvenida -->
+        <StackLayout Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Asistente de Compras" 
+                   FontSize="Large" 
+                   HorizontalOptions="Center"/>
+            <Label Text="Para nunca olvidar lo que vas a comprar y cuanto vas a pagar :D" 
+                   FontSize="Medium" 
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <!-- Imagen de bienvenida -->
+        <Image Grid.Row="2" Source="Welcome.png"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Aspect="AspectFit"
+               HeightRequest="200"
+               WidthRequest="300"/>
+
+        <!-- Botones -->
+        <StackLayout Grid.Row="3" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="10">
+            <Button Text="Agregar Producto" 
+                    Clicked="OnAddProductClicked" />
+            <Button Text="Ver Lista de Compras" 
+                    Clicked="OnShoppingListClicked" />
+            <Button Text="Ver Resumen de Gastos" 
+                    Clicked="OnSummaryClicked" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
